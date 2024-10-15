@@ -12,5 +12,5 @@ SMTP Email Sending: Uses Gmail’s SMTP server to send emails.
 To run this project, you need:
 Java 11 or higher
 Maven
-Kafka installed and running (for Kafka-based communication)
+Kafka installed and running (for Kafka-based communication) check main->resource->static
 A Gmail account with App Password configured for sending emails
