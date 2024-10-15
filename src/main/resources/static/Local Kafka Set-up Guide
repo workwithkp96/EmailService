@@ -1,0 +1,33 @@
+Step 1:
+Download Apache Kafka
+Download the Kafka binaries from Apache Kafka.
+Extract the downloaded Kafka package to a directory.
+
+Step 2:
+Start Zookeeper
+Kafka requires Zookeeper to run. Navigate to the Kafka directory and start Zookeeper:
+
+bash
+    bin/zookeeper-server-start.sh config/zookeeper.properties
+
+Step 3:
+Start Kafka Server
+Once Zookeeper is running, start the Kafka broker:
+
+bash
+    bin/kafka-server-start.sh config/server.properties
+
+Step 4:
+Create Kafka Topic
+Create the "sendEmail" topic for the email service:
+
+bash
+    bin/kafka-topics.sh --create --topic sendEmail --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+
+Step 5:
+Verify the Topic
+To verify that the topic was created:
+
+bash
+    bin/kafka-topics.sh --list --bootstrap-server localhost:9092
